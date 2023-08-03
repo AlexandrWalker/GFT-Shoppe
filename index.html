@@ -1,0 +1,533 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script language="JavaScript" text="text/javascript" src="js/app.js"></script>
+    <title>GFT Shoppe</title>
+</head>
+<body>
+
+    <!-- Sprite -->
+    <svg style="display: none">
+        <symbol id="present" viewBox="0 0 37 40">
+            <g>
+                <path d="M34.0272 14.1659L31.9593 13.6117C32.433 12.8473 32.7855 12.0141 33.0042 11.1418C33.8888 7.84053 31.9229 4.43549 28.6216 3.55092C25.8472 2.80751 23.3155 4.8461 21.3852 7.26765C20.901 4.36047 19.6741 1.15342 16.6482 0.342641C13.3469 -0.541928 9.94189 1.42398 9.05733 4.72523C8.78416 5.74468 8.69334 6.62416 8.72733 7.38676L6.65934 6.83264C4.77267 6.32711 2.82724 7.45031 2.32171 9.33698L1.40506 12.758C0.899522 14.6446 2.02272 16.5901 3.90939 17.0956L0.701114 29.0691C0.19558 30.9557 1.31878 32.9012 3.20545 33.4067L23.7314 38.9066C25.618 39.4121 27.5635 38.2889 28.069 36.4023L31.2773 24.4288C33.164 24.9343 35.1094 23.8112 35.6149 21.9245L36.5316 18.5035C37.0371 16.6168 35.9139 14.6714 34.0272 14.1659ZM27.705 6.97191C29.1196 7.35094 29.9623 8.81056 29.5832 10.2251C28.8958 12.7909 27.825 12.504 27.1853 12.3325L22.9467 11.1968C24.543 8.73529 26.4649 6.63962 27.705 6.97191ZM12.4783 5.64188C12.8573 4.2273 14.317 3.38459 15.7315 3.76363C17.2505 4.17062 17.9644 7.1577 18.1162 9.90251L13.5013 8.66595C12.8616 8.49453 11.7908 8.20762 12.4783 5.64188ZM5.74269 10.2536L17.7161 13.4619L16.7995 16.8829L4.82604 13.6746L5.74269 10.2536ZM4.1221 29.9857L7.33038 18.0123L15.8828 20.3039L12.6746 32.2773L4.1221 29.9857ZM24.648 35.4856L16.0956 33.194L19.3038 21.2205L27.8563 23.5122L24.648 35.4856ZM20.2205 17.7995L21.0982 14.524L21.1662 14.3864L33.1106 17.5868L32.1957 21.0083L20.2205 17.7995Z"/>
+            </g>
+        </symbol>
+        
+        <symbol id="step1" viewBox="0 0 38 38">
+            <g>
+                <path d="M36.1992 6.62031C35.7597 6.09287 35.2095 5.66867 34.5876 5.37784C33.9657 5.087 33.2874 4.93666 32.6008 4.9375H7.3383L7.27267 4.38906C7.13838 3.24909 6.59046 2.19802 5.73282 1.43512C4.87517 0.672224 3.76741 0.250534 2.61955 0.25L2.27267 0.25C1.85827 0.25 1.46085 0.41462 1.16782 0.707646C0.874795 1.00067 0.710175 1.3981 0.710175 1.8125C0.710175 2.2269 0.874795 2.62433 1.16782 2.91735C1.46085 3.21038 1.85827 3.375 2.27267 3.375H2.61955C3.00226 3.37505 3.37164 3.51556 3.65763 3.76987C3.94362 4.02418 4.12634 4.37461 4.17111 4.75469L6.32111 23.0359C6.54432 24.9372 7.4578 26.6903 8.88816 27.9625C10.3185 29.2347 12.1662 29.9375 14.0805 29.9375H30.3977C30.8121 29.9375 31.2095 29.7729 31.5025 29.4799C31.7956 29.1868 31.9602 28.7894 31.9602 28.375C31.9602 27.9606 31.7956 27.5632 31.5025 27.2701C31.2095 26.9771 30.8121 26.8125 30.3977 26.8125H14.0805C13.1134 26.8098 12.1708 26.508 11.3819 25.9485C10.5931 25.3891 9.9966 24.5993 9.67424 23.6875H28.2992C30.1309 23.6876 31.9045 23.0441 33.3099 21.8694C34.7153 20.6948 35.6634 19.0636 35.9883 17.2609L37.2149 10.4578C37.3373 9.78282 37.3098 9.08917 37.1343 8.426C36.9588 7.76283 36.6395 7.14637 36.1992 6.62031ZM34.1477 9.90312L32.9196 16.7062C32.7244 17.7891 32.1547 18.7687 31.31 19.4737C30.4653 20.1788 29.3995 20.5642 28.2992 20.5625H9.17736L7.70705 8.0625H32.6008C32.8303 8.06113 33.0573 8.11034 33.2657 8.20665C33.4741 8.30295 33.6586 8.44398 33.8063 8.6197C33.954 8.79542 34.0611 9.00152 34.1201 9.22334C34.1791 9.44516 34.1885 9.67726 34.1477 9.90312Z"/>
+                <path d="M11.6477 37.75C13.3736 37.75 14.7727 36.3509 14.7727 34.625C14.7727 32.8991 13.3736 31.5 11.6477 31.5C9.92179 31.5 8.52267 32.8991 8.52267 34.625C8.52267 36.3509 9.92179 37.75 11.6477 37.75Z"/>
+                <path d="M27.2727 37.75C28.9986 37.75 30.3977 36.3509 30.3977 34.625C30.3977 32.8991 28.9986 31.5 27.2727 31.5C25.5468 31.5 24.1477 32.8991 24.1477 34.625C24.1477 36.3509 25.5468 37.75 27.2727 37.75Z"/>
+            </g>
+        </symbol>
+
+        <symbol id="step2" viewBox="0 0 38 38">
+            <g>
+                <path d="M31.5 11.1875H28.7844C29.6678 10.4087 30.3691 9.44512 30.8384 8.365C31.3077 7.28487 31.5336 6.1147 31.5 4.9375C31.5 4.5231 31.3354 4.12567 31.0424 3.83265C30.7493 3.53962 30.3519 3.375 29.9375 3.375C29.5231 3.375 29.1257 3.53962 28.8326 3.83265C28.5396 4.12567 28.375 4.5231 28.375 4.9375C28.375 9.03438 24.6703 10.4531 21.8531 10.9391C22.8929 9.0954 23.5189 7.04745 23.6875 4.9375C23.6875 3.6943 23.1936 2.50201 22.3146 1.62294C21.4355 0.74386 20.2432 0.25 19 0.25C17.7568 0.25 16.5645 0.74386 15.6854 1.62294C14.8064 2.50201 14.3125 3.6943 14.3125 4.9375C14.4811 7.04745 15.1071 9.0954 16.1469 10.9391C13.3297 10.4531 9.625 9.03438 9.625 4.9375C9.625 4.5231 9.46038 4.12567 9.16735 3.83265C8.87433 3.53962 8.4769 3.375 8.0625 3.375C7.6481 3.375 7.25067 3.53962 6.95765 3.83265C6.66462 4.12567 6.5 4.5231 6.5 4.9375C6.46642 6.1147 6.6923 7.28487 7.16162 8.365C7.63093 9.44512 8.33218 10.4087 9.21562 11.1875H6.5C4.8424 11.1875 3.25269 11.846 2.08058 13.0181C0.90848 14.1902 0.25 15.7799 0.25 17.4375L0.25 19C0.25 19.8288 0.57924 20.6237 1.16529 21.2097C1.75134 21.7958 2.5462 22.125 3.375 22.125V29.9375C3.37748 32.0087 4.20138 33.9944 5.66597 35.459C7.13056 36.9236 9.11626 37.7475 11.1875 37.75H26.8125C28.8837 37.7475 30.8694 36.9236 32.334 35.459C33.7986 33.9944 34.6225 32.0087 34.625 29.9375V22.125C35.4538 22.125 36.2487 21.7958 36.8347 21.2097C37.4208 20.6237 37.75 19.8288 37.75 19V17.4375C37.75 15.7799 37.0915 14.1902 35.9194 13.0181C34.7473 11.846 33.1576 11.1875 31.5 11.1875ZM19 3.375C19.4144 3.375 19.8118 3.53962 20.1049 3.83265C20.3979 4.12567 20.5625 4.5231 20.5625 4.9375C20.3739 6.59817 19.8418 8.20142 19 9.64531C18.1582 8.20142 17.6261 6.59817 17.4375 4.9375C17.4375 4.5231 17.6021 4.12567 17.8951 3.83265C18.1882 3.53962 18.5856 3.375 19 3.375ZM3.375 17.4375C3.375 16.6087 3.70424 15.8138 4.29029 15.2278C4.87634 14.6417 5.6712 14.3125 6.5 14.3125H17.4375V19H3.375V17.4375ZM6.5 29.9375V22.125H17.4375V34.625H11.1875C9.9443 34.625 8.75201 34.1311 7.87294 33.2521C6.99386 32.373 6.5 31.1807 6.5 29.9375ZM31.5 29.9375C31.5 31.1807 31.0061 32.373 30.1271 33.2521C29.248 34.1311 28.0557 34.625 26.8125 34.625H20.5625V22.125H31.5V29.9375ZM20.5625 19V14.3125H31.5C32.3288 14.3125 33.1237 14.6417 33.7097 15.2278C34.2958 15.8138 34.625 16.6087 34.625 17.4375V19H20.5625Z"/>
+            </g>
+        </symbol>
+
+        <symbol id="step3" viewBox="0 0 30 38">
+            <g>
+                <path d="M28.2486 27.2639C28.2157 27.2169 25.8117 24.4232 25.8117 24.4232C26.6852 23.7797 27.2741 22.8217 27.454 21.7519C27.634 20.682 27.3907 19.584 26.7758 18.6903C26.7367 18.6339 23.8256 15.4176 23.8256 15.4176C24.5538 15.0504 25.1475 14.4627 25.5222 13.7383C25.8444 13.1178 25.9892 12.4203 25.9406 11.7228C25.892 11.0253 25.6519 10.3547 25.2467 9.78485C25.2138 9.73477 17.9487 1.51175 17.9487 1.51175C17.5675 1.11295 17.1096 0.795533 16.6024 0.57867C16.0952 0.361808 15.5493 0.25 14.9977 0.25C14.446 0.25 13.9002 0.361808 13.393 0.57867C12.8858 0.795533 12.4278 1.11295 12.0467 1.51175C12.0467 1.51175 4.77993 9.73477 4.74706 9.78172C4.34187 10.3516 4.10176 11.0222 4.05316 11.7197C4.00456 12.4172 4.14935 13.1146 4.4716 13.7352C4.84624 14.4596 5.43996 15.0473 6.16817 15.4145C6.16817 15.4145 3.25865 18.6308 3.21796 18.6871C2.60303 19.5809 2.3598 20.6788 2.53972 21.7487C2.71964 22.8186 3.3086 23.7766 4.18206 24.4201C4.18206 24.4201 1.77807 27.2138 1.7452 27.2639C1.26072 27.9683 0.977782 28.7917 0.926902 29.6451C0.876022 30.4985 1.05914 31.3497 1.45649 32.1067C1.85384 32.8637 2.45035 33.4979 3.18166 33.9408C3.91298 34.3836 4.75134 34.6184 5.6063 34.6198H13.4318V36.1849C13.4318 36.6 13.5967 36.9981 13.8902 37.2916C14.1837 37.5851 14.5818 37.75 14.9969 37.75C15.412 37.75 15.8101 37.5851 16.1036 37.2916C16.3971 36.9981 16.562 36.6 16.562 36.1849V34.6198H24.3875C25.243 34.6196 26.0821 34.3856 26.8143 33.9432C27.5465 33.5008 28.144 32.8667 28.5421 32.1095C28.9402 31.3523 29.1238 30.5007 29.0732 29.6467C29.0226 28.7927 28.7396 27.9687 28.2548 27.2639H28.2486ZM25.7679 30.6554C25.6372 30.9084 25.4391 31.1202 25.1955 31.2674C24.9518 31.4147 24.6721 31.4916 24.3875 31.4896H5.6063C5.32689 31.49 5.05248 31.4156 4.81155 31.2741C4.57063 31.1326 4.37197 30.9292 4.23621 30.685C4.10045 30.4408 4.03254 30.1647 4.03953 29.8854C4.04652 29.606 4.12816 29.3337 4.27597 29.0966L7.61745 25.2292H16.562C16.9771 25.2292 17.3752 25.0643 17.6687 24.7708C17.9622 24.4773 18.1271 24.0792 18.1271 23.6641C18.1271 23.249 17.9622 22.851 17.6687 22.5574C17.3752 22.2639 16.9771 22.099 16.562 22.099H6.65491C6.47173 22.0991 6.29177 22.0509 6.13311 21.9593C5.97444 21.8678 5.84266 21.7361 5.75099 21.5775C5.65933 21.4189 5.611 21.239 5.61088 21.0558C5.61075 20.8726 5.65883 20.6927 5.75029 20.5339L10.0105 15.8386H14.9969C15.412 15.8386 15.8101 15.6738 16.1036 15.3802C16.3971 15.0867 16.562 14.6886 16.562 14.2735C16.562 13.8585 16.3971 13.4604 16.1036 13.1669C15.8101 12.8733 15.412 12.7085 14.9969 12.7085H7.95394C7.80922 12.7136 7.66602 12.6775 7.54104 12.6043C7.41607 12.5311 7.31446 12.424 7.24808 12.2953C7.19271 12.1945 7.165 12.081 7.16775 11.9661C7.17049 11.8511 7.20361 11.739 7.26373 11.6411L14.3881 3.58237C14.4627 3.49487 14.5554 3.4246 14.6599 3.37641C14.7643 3.32822 14.8779 3.30327 14.993 3.30327C15.108 3.30327 15.2216 3.32822 15.3261 3.37641C15.4305 3.4246 15.5232 3.49487 15.5979 3.58237L22.7191 11.6395C22.7796 11.7373 22.8131 11.8493 22.8161 11.9643C22.8191 12.0792 22.7916 12.1929 22.7363 12.2937C22.6708 12.4212 22.5708 12.5278 22.4476 12.6011C22.3244 12.6744 22.1831 12.7116 22.0398 12.7085H20.6813C20.3801 12.7126 20.0863 12.8031 19.835 12.9692C19.5836 13.1353 19.3852 13.3701 19.2633 13.6456C19.1413 13.9211 19.101 14.2258 19.1471 14.5235C19.1931 14.8212 19.3237 15.0995 19.5231 15.3253L24.2435 20.5339C24.3349 20.6927 24.383 20.8726 24.3829 21.0558C24.3828 21.239 24.3344 21.4189 24.2428 21.5775C24.1511 21.7361 24.0193 21.8678 23.8606 21.9593C23.702 22.0509 23.522 22.0991 23.3388 22.099H23.0931C22.7954 22.1036 22.5051 22.1924 22.2557 22.3551C22.0064 22.5179 21.8082 22.748 21.6843 23.0187C21.5603 23.2894 21.5155 23.5897 21.5552 23.8848C21.5949 24.1799 21.7173 24.4578 21.9083 24.6861L25.7115 29.0966C25.8591 29.3272 25.9421 29.5932 25.952 29.8667C25.9619 30.1403 25.8983 30.4116 25.7679 30.6523V30.6554Z"/>
+            </g>
+        </symbol>
+    </svg>
+
+    <!-- Header -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+
+            <a class="logo" href="index.html"><img src="img/logo.svg" alt=""></a>
+            
+            <div class="nav" id="nav">
+                <a class="nav_link" href="#">Collections</a>
+                <a class="nav_link" href="#">How it works</a>
+                <a class="nav_link" href="#">FAQ</a>
+                <a class="nav_link" href="my gft.html">My GFTs</a>
+            </div>
+
+            <div class="registration">
+                <a class="nav_link" href="#">Sign in</a>
+                <h3></h3>
+                <a class="nav_link" href="#">Register</a>
+
+                <button class="btn" type="button">Connect Wallet</button>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+    <!-- Page -->
+    <page>
+        <!-- Intro -->
+        <div class="intro" id="intro">
+            <div class="container">
+                <div class="intro_inner">
+                    <h1 class="intro_title">This holiday season, give the gift of a GFT</h1>
+                    <h2 class="intro_subtitle">GFTs are limited edition NFTs made especially for gifting</h2>
+                    <button class="btn" type="button">Buy a GFT</button>
+
+                    <div class="blur_item blur_item--present">
+                        <svg class="present">
+                            <use xlink:href="#present"></use>
+                        </svg>
+                    </div>
+                    <div class="blur_item blur_item--gft">
+                        <h2 class="gft">gft</h2>
+                    </div>
+                    <div class="blur_item blur_item--nft">
+                        <h2 class="nft">nft</h2>
+                    </div>
+                    <div class="blur_item blur_item--surprise">
+                        <h2 class="surprise">surprise</h2>
+                    </div>
+                </div>
+
+                <div class="eclipse">
+                    <div class="eclipse_item_1"></div>
+                    <div class="eclipse_item_2"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Teaser -->
+        <div class="teaser">
+            <div class="container">
+                <div class="teaser_inner">
+                    <img src="img/atari.png" alt="">
+
+                    <div class="teaser_text">
+                        <h2 class="teaser_subtitle">Coming Soon</h2>
+                        <h1 class="title">Atari GFTs</h1>
+                    </div>
+
+                    <img src="img/nftxx.gif" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- What Is -->
+        <div class="what_is">
+            <div class="container">
+                <h1 class="title what_is__title">Inside Every GFT is a Surprise NFT</h1>
+
+                <div class="what_is_inner">
+                    <div class="what_is_item">
+                        <img src="img/surprise_gft_1.png" alt="">
+                        <p>A GFT is an NFT, or non-fungible token, on the Polygon blockchain.</p>
+                    </div>
+
+                    <div class="what_is_item">
+                        <img src="img/surprise_gft_2.png" alt="">
+                        <p>There are 10,000 GFTs in each collection, some more rare than others.</p>
+                    </div>
+
+                    <div class="what_is_item">
+                        <img src="img/surprise_gft_3.png" alt="">
+                        <p>On December 25th, Holiday Edition GFTs will unwrap, and holders will find
+                            out exactly what’s inside their GFT surprise gift box.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Collection -->
+        <div class="collection">
+            <div class="container">
+
+                <h1 class="title collection__title">Limited Edition GFT Collections</h1>
+
+                <div class="collection_inner">
+                    
+                    <div class="collection_block">
+                        <div class="collection_block__inner">
+                            <div class="collection__eclipse">
+                                <div class="collection__eclipse_1"></div>
+                                <div class="collection__eclipse_2"></div>
+                            </div>
+    
+                            <div class="collection_item">
+                                <img src="img/rectangle_1.png" alt="" class="collection_item__img">
+                                <div class="collection_item__title">
+                                    <h2 class="collection_item__name">GFT Holiday Edition</h2>
+                                    <div class="collection_item__brand_gft">
+                                        <div class="check"></div>
+                                        GFT
+                                    </div>
+                                    <div class="collection_item__price">
+                                        <h4>Price</h4>
+                                        <span>0.02</span>
+                                    </div>
+                                </div>
+                                <div class="collection_item__pay">
+                                    <div class="collection_item__pay_number">
+                                        <button class="minus" type="button"></button>
+                                        <span class="collection_item__pay_event">1</span>
+                                        <button class="plus" type="button"></button>
+                                    </div>
+                                    <button class="btn btn--collection" type="button" onclick="document.location='gft edition.html'">Buy now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collection_wallet">
+                            <input type="text" required placeholder="ETH wallet for whitelist">
+                            <button class="btn btn--collection_wallet" type="submit">Submit</button>
+                        </div>
+                    </div>
+
+                    <div class="collection_block">
+                        <div class="collection_block__inner">
+                            <div class="collection__eclipse">
+                                <div class="collection__eclipse_1"></div>
+                                <div class="collection__eclipse_2"></div>
+                            </div>
+    
+                            <div class="collection_item">
+                                <img src="img/rectangle_2.png" alt="" class="collection_item__img">
+                                <div class="collection_item__title">
+                                    <h2 class="collection_item__name">Atari Edition One</h2>
+                                    <div class="collection_item__brand_atari">
+                                        <div class="check"></div>
+                                        Atari
+                                    </div>
+                                    <div class="collection_item__price">
+                                        <h4>Price</h4>
+                                        <span>0.05</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="coming_soon">
+                                    <span class="coming_soon__text">Coming soon</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collection_wallet">
+                            <input type="text" required placeholder="ETH wallet for whitelist">
+                            <button class="btn btn--collection_wallet" type="submit">Submit</button>
+                        </div>
+                    </div>
+
+                    <div class="collection_block">
+                        <div class="collection_block__inner">
+                            <div class="collection__eclipse collection__eclipse_null">
+                                <div class="collection__eclipse_1"></div>
+                                <div class="collection__eclipse_2"></div>
+                            </div>
+    
+                            <div class="collection_item">
+                                <img src="img/coming_soon.png" alt="" class="collection_item__img">
+                                <div class="collection_item__title">
+                                    <h2 class="collection_item__name">Future Collections</h2>
+                                    <div class="collection_item__brand_gft collection_item__brand_null">
+                                    </div>
+                                    <div class="collection_item__price">
+                                        <h4>Price</h4>
+                                        <span>-</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="coming_soon">
+                                    <span class="coming_soon__text">Coming soon</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collection_wallet">
+                            <input type="text" required placeholder="ETH wallet for whitelist">
+                            <button class="btn btn--collection_wallet" type="submit">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Work -->
+        <div class="work">
+            <div class="container">
+
+                <div class="title work__title">How it works</div>
+
+                <div class="work_inner">
+                    <div class="work_item">
+                        <div class="work_item__header">
+                            <div class="blur_item">
+                                <span class="work_item__circle"></span>
+                                <svg class="step">
+                                    <use xlink:href="#step1"></use>
+                                </svg>
+                            </div>
+
+                            <div class="work_item__content">
+                                <h4 class="work_item__step">Step 1</h4>
+                                <h2 class="work_item__title">Buy your GFT</h2>
+                            </div>
+                        </div>
+                        <p class="work_item__text">You can buy a GFT with a credit card or with cryptocurrency.
+                            If you want to buy with crypto, but don’t have a wallet, learn how to set one up here.</p>
+                    </div>
+
+                    <div class="work_item">
+                        <div class="work_item__header">
+                            <div class="work_item__detail">
+                                <span class="work_item__circle"></span>
+                                <div class="blur_item">
+                                    <svg class="step">
+                                        <use xlink:href="#step2"></use>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="work_item__content">
+                                <h4 class="work_item__step">Step 2</h4>
+                                <h2 class="work_item__title">Gift your GFT</h2>
+                            </div>
+                            
+                        </div>
+                        <p class="work_item__text">Send the GFT to a lucky recipient. Or keep it for yourself — we won’t blame you!</p>
+                    </div>
+
+                    <div class="work_item">
+                        <div class="work_item__header">
+                            <div class="work_item__detail">
+                                <span class="work_item__circle"></span>
+                                <div class="blur_item">
+                                    <svg class="step">
+                                        <use xlink:href="#step3"></use>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="work_item__content">
+                                <h4 class="work_item__step">Step 3</h4>
+                                <h2 class="work_item__title">Unwrap your GFT</h2>
+                            </div>
+                            
+                        </div>
+                        <p class="work_item__text">On December 25th, your surprise gift box will automatically unwrap. Head over to
+                            OpenSea to find out which collectible is inside! Join the online community of GFT owners and
+                            spread the GFT love to others.</p>
+
+                        <div class="discord">
+                            <span class="discord__text">Join Discord</span>
+                            <img class="discord__img" src="img/discord.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Shoppe -->
+        <div class="shoppe">
+            <div class="container">
+                <div class="shoppe_inner">
+                    
+                    <div class="blur_item blur_item--decentraland">
+                        <img src="img/decentraland.png" alt="">
+                    </div>
+
+                    <div class="shoppe__title">
+                        Visit our GFT Shoppe in the metaverse!
+                    </div>
+                    <img src="img/gft_shoppe.png" alt="" class="shoppe__img">
+                </div>
+            </div>
+        </div>
+        <!-- FAQ -->
+        <div class="faq">
+            <div class="container">
+
+                <div class="title faq-title">FAQ</div>
+
+                <div class="faq_inner">
+
+                    <div class="accordion">
+                        <div class="accordion_item active" data-collapse="#tab_1">
+                            <div class="accordion_item__header">
+                                <div class="accordion_item__title">What are GFTs?</div>
+                            </div>
+                            <div class="accordion_item__content" id="tab_1">
+                                <p>GFTs are NFTs designed for gifting, just in time for the holidays. Each GFT is an NFT built on the Ethereum blockchain, wrapped in a digital box. All GFTs will unwrap on December 25th.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion_item" data-collapse="#tab_2">
+                            <div class="accordion_item__header">
+                                <div class="accordion_item__title">What is an NFT?</div>
+                            </div>
+                            <div class="accordion_item__content" id="tab_2">
+                                <p>NFT stands for Non Fungible Token. An NFT is a crypto token that represents a specific asset on a
+                                    blockchain. NFTs come in many forms, from a flat jpeg, to videos, virtual land and even music.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion_item" data-collapse="#tab_3">
+                            <div class="accordion_item__header">
+                                <div class="accordion_item__title">How many GFTs are there?</div>
+                            </div>
+                            <div class="accordion_item__content" id="tab_3">
+                                <p>There are 10,000 GFTs in each collection. Within each collection there are a variety of GFT types, some more rare than others.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion_item" data-collapse="#tab_4">
+                            <div class="accordion_item__header">
+                                <div class="accordion_item__title">What is the GFT Shoppe?</div>
+                            </div>
+                            <div class="accordion_item__content" id="tab_4">
+                                <p>The GFT Shoppe is your go-to digital destination to purchase GFTs for the holidays. There is also a storefront
+                                    in the Decentraland metaverse. Check it out here.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion_item" data-collapse="#tab_5">
+                            <div class="accordion_item__header">
+                                <div class="accordion_item__title">When can I buy a GFT?</div>
+                            </div>
+                            <div class="accordion_item__content" id="tab_5">
+                                <p>Beginning on December 15th, GFTs will be available for purchase on the GFT Shoppe website (www.gftshoppe.com).</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion_item" data-collapse="#tab_6">
+                            <div class="accordion_item__header">
+                                <div class="accordion_item__title">How do I buy a GFT?</div>
+                            </div>
+                            <div class="accordion_item__content" id="tab_6">
+                                <p>You can purchase a GFT with either cryptocurrency or a credit card. When you buy a GFT from the GFT Shoppe website,
+                                    you are minting the NFT and claiming its ownership on the blockchain.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion_item" data-collapse="#tab_7">
+                            <div class="accordion_item__header">
+                                <div class="accordion_item__title">How many GFTs are there?</div>
+                            </div>
+                            <div class="accordion_item__content" id="tab_7">
+                                <p>You will need a crypto wallet. Learn how to set one up here. Consider GFTs to be your gateway into crypto.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion_item" data-collapse="#tab_8">
+                            <div class="accordion_item__header">
+                                <div class="accordion_item__title">How many GFTs are there?</div>
+                            </div>
+                            <div class="accordion_item__content" id="tab_8">
+                                <p>You can give someone a GFT by directly sending the GFT to their crypto wallet or by sharing it over email.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion_item" data-collapse="#tab_9">
+                            <div class="accordion_item__header">
+                                <div class="accordion_item__title">How can I send a GFT over email if it's an NFT?</div>
+                            </div>
+                            <div class="accordion_item__content" id="tab_9">
+                                <p>If you want to share the GFT over email it will be transferred to the GFTShoppe wallet. The recipient of the
+                                    GFT will receive an email with instructions and a link to retrieve the GFT to their wallet. You will pay the
+                                    gas fees on the initial transactions, but we’ll cover it on the retrieval (it is the holiday season after all).</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion_item" data-collapse="#tab_10">
+                            <div class="accordion_item__header">
+                                <div class="accordion_item__title">What are gas fees?</div>
+                            </div>
+                            <div class="accordion_item__content" id="tab_10">
+                                <p>Gas fees are the transaction fees that you are required to pay if you buy or send something on the Ethereum
+                                    blockchain. The more people conducting transactions on Ethereum at a time, the higher the gas fees will be.
+                                    As Ethereum and NFTs have become more popular, gas fees have become very high. Not to worry, we have a solution for that...</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion_item" data-collapse="#tab_11">
+                            <div class="accordion_item__header">
+                                <div class="accordion_item__title">How are GFTs designed for gifting?</div>
+                            </div>
+                            <div class="accordion_item__content" id="tab_11">
+                                <p>We developed GFTs with a layer 2 system called Polygon that lowers the gas fees for every transaction.
+                                    This means you can send a GFT to a friend without paying an exorbitant price for the transfer itself.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion_item" data-collapse="#tab_12">
+                            <div class="accordion_item__header">
+                                <div class="accordion_item__title">How else are GFTs designed for gifting?</div>
+                            </div>
+                            <div class="accordion_item__content" id="tab_12">
+                                <p>They come in a digitally wrapped box! On December 25th, all GFTs will “unwrap” and reveal the GFT present inside.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion_item" data-collapse="#tab_13">
+                            <div class="accordion_item__header">
+                                <div class="accordion_item__title">Why should I buy a GFT?</div>
+                            </div>
+                            <div class="accordion_item__content" id="tab_13">
+                                <p>NFT was the Collins Dictionary word of the year—GFTs are the most on-trend holiday gifts to buy this season.
+                                    GFTs won’t be delayed by Amazon. They won’t be damaged by UPS. You don’t need to sit in traffic to buy them
+                                    at the mall. Deadlines for holiday shipping are fast approaching, and we know you forgot to buy a present
+                                    for your parents. Plus, they’re adorable.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="faq_btn">
+                    <button class="btn btn--buy">Buy GFTs</button>
+                </div>
+            </div>
+        </div>
+
+    </page>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_inner">
+                <img class="logo" src="img/logo.svg" alt="">
+
+                <div class="copyright">
+                    <h4>Copyright 2021 GFT Shoppe, Inc. All Rights Reserved.</h4>
+                    <a>Terms of Service</a>
+                </div>
+
+                <div class="footer__contacts">
+                    <h3 class="footer__name">Patent Pending</h3>
+                    <a class="footr__email" href="#">info@gftshoppe.com</a>
+                </div>
+            </div>
+
+            <div class="footer__text">
+                <p>Disclaimer: In purchasing a non-fungible token (“NFT”) from Republic Realm Inc. (“Realm”) you acknowledge and agree that:</p>
+                <br><p>NEITHER REALM NOR ANY OF ITS AFFILIATES AND THEIR OFFICERS, DIRECTORS, MANAGER(S), EMPLOYEES, AGENTS, SHAREHOLDERS/MEMBERS MAKES ANY WARRANTY WHATSOEVER WITH RESPECT TO THE NFTs, INCLUDING ANY (A) WARRANTY OF MERCHANTABILITY; (B) WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE; (C) WARRANTY OF TITLE; OR (D) WARRANTY AGAINST INFRINGEMENT OF INTELLECTUAL PROPERTY RIGHTS OF A THIRD PARTY; WHETHER EXPRESS OR IMPLIED BY LAW, COURSE OF DEALING, COURSE OF PERFORMANCE, USAGE OF TRADE OR OTHERWISE.</p>
+                <br><p>You shall take all statements, recommendations, data, opinions, documents, and the like on an as-is basis and rely on your own counsel, third-party service providers and judgment in connection therewith. IN NO EVENT SHALL REALM OR ANY OF ITS AFFILIATES AND THEIR OFFICERS, DIRECTORS, MANAGER(S), EMPLOYEES, AGENTS, SHAREHOLDERS/MEMBERS BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, WHETHER UNDER ANY TORT, CONTRACT, NEGLIGENCE, STRICT LIABILITY, OR OTHER LEGAL OR EQUITABLE THEORY WHATSOEVER, INCLUDING WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, INTELLECTUAL PROPERTY INFRINGEMENT, PRICE DEPRECIATION, LEGAL OR REGULATORY ENFORCEMENT, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, AND THE LIKE, ARISING OUT OF THIS AGREEMENT, EVEN IF REPUBLIC HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+                <br><p>THE FOREGOING DOES NOT AFFECT ANY WARRANTIES THAT CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW.</p>	
+                <br><p>This NFT sale is not intended to be an offering or sale of securities, swaps on either securities or commodities or a financial instrument of any kind as may be determined by any law, rule, or regulation. Purchases and sales of NFTs may not be subject to the protections of any laws governing those types of financial instruments. This document and all other content, including without limitation on https://www.republicre alm.com/, do not constitute a prospectus or offering document, and are not an offer to sell.</p>
+                <br><p>In the event that you deposit digital assets or NFTs into an incorrect address, Realm may not have the ability, and are under no obligation or duty, to return such digital assets or NFTs to you. This section applies regardless of whether Realm controls the destination address.</p>
+                <br><p>**Please note: exceptions to this section may be considered and made on a case-by-ca se basis and in Realm’s sole discretion.**</p>
+                <br><p>Realm does not give any advice or recommendation regarding NFTs, including, but not limited to, the suitability and/or appropriateness of, and investment strategies for, the purchase of the NFTs for financial investment purposes. You are solely responsible for determining the nature, potential value, suitability, and appropriateness of your purchase of the NFTs for yourself for any purpose. The NFTs are not designed for investment purposes and Realm does not give any advice or recommendation that the NFTs are to be considered as a type of financial investment by any law, rule, or regulation. With respect to your purchase of the NFTs, you acknowledge and agree that you are not expecting to profit from the NFTs based on any efforts by Realm or its affiliates. The purchase of an NFT is a non-reversible and non-refundable event. Realm shall have no obligation or liability for the secure custody or use of the NFT and any losses arising from such custody or use or solely the purchasers. </p>
+                <br><p>Please note the following risks in accessing or using Realm: The price and liquidity of blockchain assets, including NFTs, are extremely volatile and may be subject to large fluctuations; fluctuations in the price of other digital assets could materially and adversely affect NFTs, which may also be subject to significant price volatility; legislative and regulatory changes or actions at the state, federal, or international level may adversely affect the use, transfer, exchange, and value of NFTs; NFTs are not legal tender and are not backed by the government; transactions in NFTs may be irreversible, and, accordingly, losses due to fraudulent or accidental transactions may not be recoverable; some transactions in NFTs shall be deemed to be made when recorded on a public ledger, which is not necessarily the date or time that you initiated the transaction; the value of NFTs may be derived from the continued willingness of market participants to exchange fiat currency or digital assets for NFTs, which may result in the potential for permanent and total loss of value of a particular NFT should the market for that NFT disappear; the nature of NFTs may lead to an increased risk of fraud or cyber-attack, and may mean that technological difficulties experienced by Realm may prevent the access to or use of your digital assets and/ or personal information; and changes to any third party sites may create a risk that your access to and use of Realm will suffer.</p>
+                <br><p>You are solely responsible for determining the nature, potential value, suitability, and appropriateness of these risks for yourself. You access and use Realm at your own risk; however, you also acknowledge that this brief statement does not disclose all of the risks associated with NFTs and other digital assets. You agree and understand that Realm will not be responsible for any communication failures, disruptions, errors, distortions or delays it may experience when using, selling or promoting NFTs, however caused. </p>
+                <br><p>You hereby expressly waive and release any and all claims, now known or hereafter known, against the Realm, its affiliates and their officers, directors, manager(s), employees, agents, shareholders/members (collectively, "Releasees"), related to the NFTs, whether arising out of the ordinary negligence of Realm or any Releasees or otherwise. You covenant not to make or bring any such claim against Realm or any other Releasee, and forever release and discharge Realm and all other Releasees from liability under such claims.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</body>
+</html>
