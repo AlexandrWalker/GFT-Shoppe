@@ -1,1 +1,1 @@
-# GFT-Shoppe: https://alexandrwalker.github.io/GFTShoppe/
+# GFT-Shoppe: https://alexandrwalker.github.io/GFT-Shoppe/
