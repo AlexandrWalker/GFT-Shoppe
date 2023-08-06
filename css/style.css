@@ -12,15 +12,20 @@
     -webkit-box-sizing: border-box;
 }
 
-:focus, :active {
+:focus,
+:active {
     outline: none;
 }
 
-nav, footer, header, aside {
+nav,
+footer,
+header,
+aside {
     display: block;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     font-size: 100%;
@@ -35,12 +40,15 @@ html, body {
     background-color: #fff;
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
     font-family: inherit;
     color: #252129;
 }
 
-button, a {
+button,
+a {
     cursor: pointer;
     text-decoration: none;
     color: #0A0A0A;
@@ -75,9 +83,10 @@ h6 {
     line-height: 1.2;
     text-align: center;
 }
+
 /* ============================= */
 /* Header */
-.header  {
+.header {
     position: absolute;
     top: 0;
     z-index: 1000;
@@ -149,6 +158,7 @@ h6 {
     background-color: transparent;
     color: #0A0A0A;
 }
+
 /* ============================= */
 /* Intro */
 .intro {
@@ -220,6 +230,7 @@ h6 {
     background-color: #5633D5;
     filter: blur(150px);
 }
+
 /* Blur */
 .blur_item {
     position: absolute;
@@ -295,6 +306,7 @@ h6 {
 .surprise {
     z-index: 101;
 }
+
 /* ============================= */
 /* Teaser */
 .teaser {
@@ -334,6 +346,7 @@ h6 {
     font-size: 20px;
     margin-bottom: 25px;
 }
+
 /* ============================= */
 /* what_is */
 .what_is {
@@ -370,6 +383,7 @@ h6 {
     font-weight: 400;
     line-height: 1.5;
 }
+
 /* ============================= */
 /* Collection */
 .collection {
@@ -403,7 +417,7 @@ h6 {
     margin-bottom: 30px;
 }
 
-.collection__eclipse_1{
+.collection__eclipse_1 {
     position: absolute;
     top: -90px;
     left: -76px;
@@ -520,11 +534,11 @@ h6 {
 
 .collection_item__price span::before {
     content: "";
-    position: absolute; 
+    position: absolute;
     top: 13px;
     left: 0;
 
-    width: 0; 
+    width: 0;
     height: 0;
     border: 5px solid transparent;
     border-bottom: 9px solid #5633D5;
@@ -532,11 +546,11 @@ h6 {
 
 .collection_item__price span:after {
     content: "";
-    position: absolute; 
+    position: absolute;
     top: 26px;
-    left: 0; 
+    left: 0;
 
-    width: 0; 
+    width: 0;
     height: 0;
     border: 5px solid transparent;
     border-top: 9px solid #5633D5;
@@ -620,7 +634,7 @@ h6 {
 
     margin-left: 15px;
     text-align: center;
-    
+
     -webkit-box-shadow: 0px 0px 20px 0px rgba(86, 51, 213, 0.5);
     -moz-box-shadow: 0px 0px 20px 0px rgba(86, 51, 213, 0.5);
     box-shadow: 0px 0px 20px 0px rgba(86, 51, 213, 0.5);
@@ -738,6 +752,7 @@ h6 {
 .collection_item__brand_null {
     filter: grayscale(1);
 }
+
 /* ============================= */
 /* Works */
 .work {
@@ -780,7 +795,7 @@ h6 {
     border-radius: 50%;
 
     position: absolute;
-    right: -10px;
+    left: 65px;
     top: -10px;
     z-index: 1;
 }
@@ -829,6 +844,7 @@ h6 {
     width: 24px;
     height: 18px;
 }
+
 /* ============================= */
 /* Shoppe */
 .shoppe {
@@ -878,6 +894,7 @@ h6 {
     width: 389px;
     height: 250px;
 }
+
 /* ============================= */
 /* FAQ */
 .faq-title {
@@ -945,11 +962,11 @@ h6 {
     padding-top: 10px;
 }
 
-.tab :checked ~ .tab_content {
+.tab :checked~.tab_content {
     display: block;
 }
 
-.tab :checked ~ .tab_btn:after {
+.tab :checked~.tab_btn:after {
     transform: translateY(-50%) rotate(-45deg);
     margin-top: 5px;
 }
@@ -970,27 +987,56 @@ h6 {
 }
 
 .accordion_item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 22px 0;
     position: relative;
-
     cursor: pointer;
 }
 
-.accordion_item__header:after {
+.accordion_item__header span {
+    font-size: 0;
+    border-radius: 50%;
+    border: 1px solid #0A0A0A;
+    width: 35px;
+    height: 35px;
+    position: relative;
+}
+
+.accordion_item__header span::before {
     content: "";
     display: block;
-    width: 16px;
-    height: 16px;
-
-    border-top: 2px solid #0A0A0A;
-    border-right: 2px solid #0A0A0A;
-
+    width: 13px;
+    height: 1px;
+    background: #0A0A0A;
     position: absolute;
     top: 50%;
-    right: 20px;
+    left: 17%;
     z-index: 1;
+    transform: rotate(45deg);
+}
 
-    transform: translateY(-50%) rotate(135deg);
+.accordion_item__header span::after {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 1px;
+    background: #0A0A0A;
+    position: absolute;
+    top: 50%;
+    right: 17%;
+    z-index: 1;
+    transform: rotate(135deg);
+}
+
+.accordion_item.active .accordion_item__header span::before {
+    width: 21px;
+}
+
+
+.accordion_item.active .accordion_item__header span::after {
+    width: 21px;
 }
 
 .accordion_icon {
@@ -1015,6 +1061,7 @@ h6 {
     font-weight: 700;
     color: #0A0A0A;
 }
+
 /*===================================*/
 .btn--buy {
     font-size: 16px;
@@ -1029,7 +1076,7 @@ h6 {
 
     margin-left: 15px;
     text-align: center;
-    
+
     -webkit-box-shadow: 0px 0px 40px 10px rgba(86, 51, 213, 0.2);
     -moz-box-shadow: 0px 0px 40px 10px rgba(86, 51, 213, 0.2);
     box-shadow: 0px 0px 40px 10px rgba(86, 51, 213, 0.2);
@@ -1048,6 +1095,7 @@ h6 {
     text-align: center;
     margin-bottom: 93px;
 }
+
 /* ============================= */
 /* Footer */
 .footer {
@@ -1110,6 +1158,7 @@ h6 {
     opacity: 0.5;
     padding: 40px 0;
 }
+
 /* ================================= */
 /* Page 2 */
 .intro_inner__p2 {
@@ -1247,6 +1296,7 @@ tr td {
     font-size: 16px;
     opacity: 0.75;
 }
+
 /* =============================== */
 /* Holdings Page */
 .collection_hp {
